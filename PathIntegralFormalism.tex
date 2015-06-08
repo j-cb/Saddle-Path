@@ -12,6 +12,9 @@ Now between each two steps we insert the identity operator $1 = \int_{-\infty}^{
 \begin{align} \label{tpi}
   (x_R t_b | x_L t_a) &=  \bra{x_R}\hat{U}(t_b,t_{N-1}) \int_{-\infty}^{+\infty} dx_{N-1} \ket{x_{N-1}}\bra{x_{N-1}} \hat{U}(t_{N-1},t_{N-2}) \cdots \ket{x_L} \\
                       &=  (\prod_{n=1}^{N-1} \int_{-\infty}^{+\infty} dx_{n}) \bra{x_R}\hat{U}(t_b,t_{N-1})  \ket{x_{N-1}}\bra{x_{N-1}} \hat{U}(t_{N-1},t_{N-2}) \cdots \ket{x_L} \\
-                      &=  (\prod_{n=1}^{N-1} \int_{-\infty}^{+\infty} dx_{n})(\prod_{n=1}^{N} (x_n t_n | x_{n-1} t_{n-1})
+                      &=  (\prod_{n=1}^{N-1} \int_{-\infty}^{+\infty} dx_{n})\prod_{n=1}^{N} (x_n t_n | x_{n-1} t_{n-1})
 \end{align}
-The occuring terms 
+For the terms 
+\begin{equation}
+  (x_n t_n | x_{n-1} t_{n-1}) = \bra{x_n} \hat{U}(t_{n},t_{n-1}) \ket{x_{n-1}} = \bra{x_n} e^{\frac{-i \epsilon \hat{H}}{\hbar} \ket{x_{n-1}} 
+\end{equation}
