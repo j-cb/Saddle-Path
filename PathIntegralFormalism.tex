@@ -2,5 +2,9 @@
 
 By the laws of quantum mechanics, the probability for a point particle that is in state $x_1$ at time $t_a$ to be found in state $x_2$ at a later time $t_b$ is
 \begin{equation} \label{qmtp}
-  (x_2 t_b | x_1 t_a) = \bra{x_2}\hat{U}(t_b,t_a)\ket{x_1}
+  (x_2 t_b | x_1 t_a) = \bra{x_2}\hat{U}(t_b,t_a)\ket{x_1}.
+\end{equation}
+We divide the time interval between $t_a$ and $t_b$ into a large number $N$ of smaller intervals by introducing time steps $t_n$ with $t_n -t_{n-1} = \frac{t_b - t_a}{N} =:\epsilon$. We split up the time evolution operator accordingly and equation \ref{qmtp} becomes
+\begin{equation} \label{qmtpn}
+  (x_2 t_b | x_1 t_a) = \bra{x_2}\cdot\hat{U}(t_b,t_{N-1}) \cdots \hat{U}(t_{n+1},t_n)\cdot\hat{U}(t_n,t_{n-1}) \cdots \hat{U}(t_2,t_1)\cdot\hat{U}(t_1,t_a)\ket{x_1}.
 \end{equation}
