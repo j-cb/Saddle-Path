@@ -8,4 +8,7 @@ We divide the time interval between $t_a$ and $t_b$ into a large number $N$ of s
 \begin{equation} \label{qmtpn}
   (x_2 t_b | x_1 t_a) = \bra{x_2}\cdot\hat{U}(t_b,t_{N-1}) \cdots \hat{U}(t_{n+1},t_n)\cdot\hat{U}(t_n,t_{n-1}) \cdots \hat{U}(t_2,t_1)\cdot\hat{U}(t_1,t_a)\ket{x_1}.
 \end{equation}
-Now between each two steps we insert the identity operator $1 = \int_{-\infinity}^{+\infinity} dx_n \ket{x_n}\bra{x_n}$.
+Now between each two steps we insert the identity operator $1 = \int_{-\infty}^{+\infty} dx_n \ket{x_n}\bra{x_n}$ and we get 
+\begin{equation} \label{tpi}
+  (x_2 t_b | x_1 t_a) = \bra{x_2}\cdot\hat{U}(t_b,t_{N-1}) \int_{-\infty}^{+\infty} dx_{N-1} \ket{x_{N-1}}\bra{x_{N-1}} \cdots \hat{U}(t_{n+1},t_n) \cdot \int_{-\infty}^{+\infty} dx_n \ket{x_n}\bra{x_n} \hat{U}(t_n,t_{n-1}) \cdots \hat{U}(t_2,t_1)\cdot\hat{U}(t_1,t_a)\ket{x_1}.
+\end{equation}
