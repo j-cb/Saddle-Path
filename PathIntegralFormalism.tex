@@ -15,6 +15,15 @@ Now between each two steps we insert the identity operator $1 = \int_{-\infty}^{
                       &=  (\prod_{n=1}^{N-1} \int_{-\infty}^{+\infty} dx_{n})\prod_{n=1}^{N} (x_n t_n | x_{n-1} t_{n-1})
 \end{align}
 For the terms 
-\begin{equation}
-  (x_n t_n | x_{n-1} t_{n-1}) = \bra{x_n} \hat{U}(t_{n},t_{n-1}) \ket{x_{n-1}} = \bra{x_n} e^{\frac{-i \epsilon \hat{H}}{\hbar} \ket{x_{n-1}} 
+\begin{equation}\label{tpn}
+  (x_n t_n | x_{n-1} t_{n-1}) = \bra{x_n} \hat{U}(t_{n},t_{n-1}) \ket{x_{n-1}} = \bra{x_n} e^{\frac{-i \epsilon \hat{H}}{\hbar}} \ket{x_{n-1}} 
 \end{equation}
+we write the Hamiltonian as
+\begin{equation}\label{HTV}
+  \hat{H}(p,x,t) = T(p) + V(x)
+\end{equation}
+and use that the commutator $[\epsilon T, \epsilon V]$ is of order $\epsilon^2$ and thus for our small $\epsilon$ can be neglected. This means (we can get this step by using the Baker–Campbell–Hausdorff formula):
+\begin{align}\label{UTV}
+  \hat{U}(t_{n},t_{n-1}) = e^{\frac{-i \epsilon \hat{H}}{\hbar}} = e^{\frac{-i \epsilon (T + V)}{\hbar}} \\
+  = e^{\frac{-i \epsilon \hat{T}}{\hbar}} e^{\frac{-i \epsilon \hat{V}}{\hbar}} (1 + \mathfrac{O} (\epsilon^2) )
+\end{align}
