@@ -46,7 +46,7 @@ and as we want to evaluate the operator $\hat{T}$ which is describen in the mome
                                 &= \int\limits_{-\infty}^{+\infty} dp \ e^{\frac{-i \epsilon V(x_{n-1})}{\hbar}} \bra{x_n} e^{\frac{-i \epsilon \hat{T}(\hat{p})}{\hbar}} \ket{p} \frac{1}{\sqrt{2 \pi \hbar}} e^{\frac{i p x_{n-1}}{\hbar}} \\
                                 &= \int\limits_{-\infty}^{+\infty} dp \ e^{\frac{-i \epsilon V(x_{n-1})}{\hbar}} e^{\frac{-i \epsilon T(p)}{\hbar}} \braket{x_n|p} \frac{1}{\sqrt{2 \pi \hbar}} e^{\frac{- i p x_{n-1}}{\hbar}} \\
                                 &= \int\limits_{-\infty}^{+\infty} dp \ e^{\frac{-i \epsilon V(x_{n-1})}{\hbar}} e^{\frac{-i \epsilon T(p)}{\hbar}} \frac{1}{\sqrt{2 \pi \hbar}} e^{\frac{i p x_{n}}{\hbar}} \frac{1}{\sqrt{2 \pi \hbar}} e^{\frac{- i p x_{n-1}}{\hbar}}  \\
-                                &= \frac{1}{2 \pi \hbar} \int\limits_{-\infty}^{+\infty} dp \ e^{\frac{-i \epsilon V(x_{n-1})}{\hbar}} e^{\frac{-i \epsilon T(p)}{\hbar}} e^{\frac{i p (x_{n} -x_{n-1})}{\hbar}}.
+                                &= \int\limits_{-\infty}^{+\infty} \frac{dp}{2 \pi \hbar}  \ e^{\frac{-i \epsilon V(x_{n-1})}{\hbar}} e^{\frac{-i \epsilon T(p)}{\hbar}} e^{\frac{i p (x_{n} -x_{n-1})}{\hbar}}.
 \end{align}
 Now we can use that for very small $\epsilon = t_n - t_{n-1}$ the definition of the time derivative gives
 \begin{equation}\label{deriv}
@@ -54,11 +54,11 @@ Now we can use that for very small $\epsilon = t_n - t_{n-1}$ the definition of 
 \end{equation}
 and we get
 \begin{align}
-   (x_n t_n | x_{n-1} t_{n-1})  &=  \frac{1}{2 \pi \hbar} \int\limits_{-\infty}^{+\infty} dp \ e^{\frac{-i \epsilon ( V(x_{n-1}) + T(p) - p \dot{x}_n)}{\hbar}}
-                                &=  \frac{1}{2 \pi \hbar} \int\limits_{-\infty}^{+\infty} dp \ e^{\frac{i \epsilon (p \dot{x}_n - H(x_{n-1},p))}{\hbar}}.
+   (x_n t_n | x_{n-1} t_{n-1})  &=  \int\limits_{-\infty}^{+\infty} \frac{dp}{2 \pi \hbar}  \ e^{\frac{-i \epsilon ( V(x_{n-1}) + T(p) - p \dot{x}_n)}{\hbar}}
+                                &=  \int\limits_{-\infty}^{+\infty} \frac{dp}{2 \pi \hbar}  \ e^{\frac{i \epsilon (p \dot{x}_n - H(x_{n-1},p))}{\hbar}}.
 \end{align}
 We put this into \ref{tpi} and get 
 \begin{align}
-  (x_R t_b | x_L t_a) &=  \frac{1}{2 \pi \hbar}  (\prod_{n=1}^{N-1} \int\limits_{-\infty}^{+\infty} dx_{n})\prod_{n=1}^{N} (\int\limits_{-\infty}^{+\infty} dp_n \ e^{\frac{i \epsilon (p_n \dot{x}_n - H(x_{n-1},p_n))}{\hbar}})  \\
-                      &= frac{1}{2 \pi \hbar}  (\prod_{n=1}^{N-1} \int\limits_{-\infty}^{+\infty} dx_{n})(\prod_{n=1}^{N} \int\limits_{-\infty}^{+\infty} dp_n) \ e^{\sum_{n=1}^{N}\frac{i \epsilon (p_n \dot{x}_n - H(x_{n-1},p_n))}{\hbar}}
+  (x_R t_b | x_L t_a) &=  (\prod_{n=1}^{N-1} \int\limits_{-\infty}^{+\infty} dx_{n})\prod_{n=1}^{N} (\int\limits_{-\infty}^{+\infty} \frac{dp_n}{2 \pi \hbar}  \ e^{\frac{i \epsilon (p_n \dot{x}_n - H(x_{n-1},p_n))}{\hbar}})  \\
+                      &=  (\prod_{n=1}^{N-1} \int\limits_{-\infty}^{+\infty} dx_{n})(\prod_{n=1}^{N} \int\limits_{-\infty}^{+\infty}  \frac{dp_n}{2 \pi \hbar}) \ e^{\sum_{n=1}^{N}\frac{i \epsilon (p_n \dot{x}_n - H(x_{n-1},p_n))}{\hbar}}
 \end{align}
