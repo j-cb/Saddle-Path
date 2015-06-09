@@ -62,3 +62,7 @@ We put this into \ref{tpi} and get
   (x_R t_b | x_L t_a) &=  (\prod_{n=1}^{N-1} \int\limits_{-\infty}^{+\infty} dx_{n})\prod_{n=1}^{N} (\int\limits_{-\infty}^{+\infty} \frac{dp_n}{2 \pi \hbar}  \ e^{\frac{i}{\hbar} \epsilon (p_n \dot{x}_n - H(x_{n-1},p_n))})  \\
                       &=  (\prod_{n=1}^{N-1} \int\limits_{-\infty}^{+\infty} dx_{n})(\prod_{n=1}^{N} \int\limits_{-\infty}^{+\infty}  \frac{dp_n}{2 \pi \hbar}) \ e^{\sum_{n=1}^{N}\frac{i}{\hbar} \epsilon (p_n \dot{x}_n - H(x_{n-1},p_n))}
 \end{align}
+If we regard $x_{n-1}$, $\dot{x}_n$ and $p_n$ in $\sum_{n=1}^{N}\frac{i}{\hbar} \epsilon (p_n \dot{x}_n - H(x_{n-1},p_n))$ as functions of the time $t$, this sum is a Riemann sum and becomes equal to the integral
+\begin{equation}
+  \int\limits_{t_a}^{t_b}  \frac{i}{\hbar} dt (p_n \dot{x}_n - H(x_{n-1},p_n))
+\end{equation}
