@@ -34,12 +34,14 @@ Again inserting $1 = \int_{-\infty}^{+\infty} dx \ket{x}\bra{x}$, the single ste
 That the potential energy $V(x)$ only depends on the position $x$ means that the position eigenkets $\ket{x}$ are eigenkets of $\hat{V}$:
 \begin{align}\label{Vx}
   \hat{V} \ket{x} &= V(x) \ket{x}  \\
-  \bra{x} e^{\frac{-i \epsilon \hat{V}}{\hbar}}  \ket{x_{n-1}} &= e^{\frac{-i \epsilon V(x_n-1)}{\hbar}} \delta (x,x_{n-1})
+  \bra{x} e^{\frac{-i \epsilon \hat{V}}{\hbar}}  \ket{x_{n-1}} &= e^{\frac{-i \epsilon V(x_{n-1})}{\hbar}} \delta (x,x_{n-1})
 \end{align}
 Thus \ref{tpntv} becomes
 \begin{equation}\label{tpni}
-   (x_n t_n | x_{n-1} t_{n-1}) = e^{\frac{-i \epsilon V(x_n-1)}{\hbar}} \bra{x_n} e^{\frac{-i \epsilon \hat{T}}{\hbar}} \ket{x_{n-1}}
+   (x_n t_n | x_{n-1} t_{n-1}) = e^{\frac{-i \epsilon V(x_{n-1})}{\hbar}} \bra{x_n} e^{\frac{-i \epsilon \hat{T(\hat{p})}}{\hbar}} \ket{x_{n-1}}
 \end{equation}
-
-
-
+and as we want to evaluate the operator $\hat{T}$ which is describen in the momentum basis, we insert $1 = \int_{-\infty}^{+\infty} dp \ket{p}\bra{p}$ and get
+\begin{align}\label{tpnp}
+   (x_n t_n | x_{n-1} t_{n-1})  &= e^{\frac{-i \epsilon V(x_{n-1})}{\hbar}} \bra{x_n} e^{\frac{-i \epsilon \hat{T(\hat{p})}}{\hbar}} int_{-\infty}^{+\infty} dp \ket{p}\bra{p} \ket{x_{n-1}}
+                                &= int_{-\infty}^{+\infty} dp e^{\frac{-i \epsilon V(x_{n-1})}{\hbar}} \bra{x_n} e^{\frac{-i \epsilon \hat{T(\hat{p})}}{\hbar}} \ket{p} \frac{1}{2 \pi \hbar} e^{\frac{i p x_n}{\hbar}}
+\end{align}
