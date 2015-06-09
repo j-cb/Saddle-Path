@@ -59,5 +59,6 @@ and we get
 \end{align}
 We put this into \ref{tpi} and get 
 \begin{align}
-  (x_R t_b | x_L t_a) &=  \frac{1}{2 \pi \hbar}  (\prod_{n=1}^{N-1} \int\limits_{-\infty}^{+\infty} dx_{n})\prod_{n=1}^{N} \int\limits_{-\infty}^{+\infty} dp_n \ e^{\frac{i \epsilon (p_n \dot{x}_n - H(x_{n-1},p_n))}{\hbar}}
+  (x_R t_b | x_L t_a) &=  \frac{1}{2 \pi \hbar}  (\prod_{n=1}^{N-1} \int\limits_{-\infty}^{+\infty} dx_{n})\prod_{n=1}^{N} (\int\limits_{-\infty}^{+\infty} dp_n \ e^{\frac{i \epsilon (p_n \dot{x}_n - H(x_{n-1},p_n))}{\hbar}})  \\
+                      &= frac{1}{2 \pi \hbar}  (\prod_{n=1}^{N-1} \int\limits_{-\infty}^{+\infty} dx_{n})(\prod_{n=1}^{N} \int\limits_{-\infty}^{+\infty} dp_n) \ e^{\sum_{n=1}^{N}\frac{i \epsilon (p_n \dot{x}_n - H(x_{n-1},p_n))}{\hbar}}
 \end{align}
