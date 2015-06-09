@@ -38,13 +38,13 @@ That the potential energy $V(x)$ only depends on the position $x$ means that the
 \end{align}
 Thus \ref{tpntv} becomes
 \begin{equation}\label{tpni}
-   (x_n t_n | x_{n-1} t_{n-1}) = e^{\frac{-i \epsilon V(x_{n-1})}{\hbar}} \bra{x_n} e^{\frac{-i \epsilon \hat{T}(\hat{p})}}{\hbar}} \ket{x_{n-1}}
+   (x_n t_n | x_{n-1} t_{n-1}) = e^{\frac{-i \epsilon V(x_{n-1})}{\hbar}} \bra{x_n} e^{\frac{-i \epsilon \hat{T}(\hat{p})}{\hbar}} \ket{x_{n-1}}
 \end{equation}
 and as we want to evaluate the operator $\hat{T}$ which is describen in the momentum basis, we insert $1 = \int_{-\infty}^{+\infty} dp \ket{p}\bra{p}$ and get
 \begin{align}\label{tpnp}
-   (x_n t_n | x_{n-1} t_{n-1})  &= e^{\frac{-i \epsilon V(x_{n-1})}{\hbar}} \bra{x_n} e^{\frac{-i \epsilon \hat{T}(\hat{p})}{\hbar}} \int_{-\infty}^{+\infty} dp \ket{p}\bra{p} \ket{x_{n-1}} \\
+   (x_n t_n | x_{n-1} t_{n-1})  &= e^{\frac{-i \epsilon V(x_{n-1})}{\hbar}} \bra{x_n} e^{\frac{-i \epsilon \hat{T}(\hat{p})}{\hbar}} \int_{-\infty}^{+\infty} dp \ket{p}\braket{p|x_{n-1}} \\
                                 &= \int_{-\infty}^{+\infty} dp \ e^{\frac{-i \epsilon V(x_{n-1})}{\hbar}} \bra{x_n} e^{\frac{-i \epsilon \hat{T}(\hat{p})}{\hbar}} \ket{p} \frac{1}{2 \pi \hbar} e^{\frac{i p x_{n-1}}{\hbar}} \\
-                                &= \int_{-\infty}^{+\infty} dp \ e^{\frac{-i \epsilon V(x_{n-1})}{\hbar}} e^{\frac{-i \epsilon T(p)}{\hbar}} \bra{x_n}\ket{p} \frac{1}{2 \pi \hbar} e^{\frac{i p x_{n-1}}{\hbar}} \\
+                                &= \int_{-\infty}^{+\infty} dp \ e^{\frac{-i \epsilon V(x_{n-1})}{\hbar}} e^{\frac{-i \epsilon T(p)}{\hbar}} \braket{x_n|p} \frac{1}{2 \pi \hbar} e^{\frac{i p x_{n-1}}{\hbar}} \\
                                 &= \int_{-\infty}^{+\infty} dp \ e^{\frac{-i \epsilon V(x_{n-1})}{\hbar}} e^{\frac{-i \epsilon T(p)}{\hbar}} \frac{1}{2 \pi \hbar} e^{\frac{- i p x_{n}}{\hbar}} \frac{1}{2 \pi \hbar} e^{\frac{i p x_{n-1}}{\hbar}}  \\
                                 &= \frac{1}{(2 \pi \hbar)^2} \int_{-\infty}^{+\infty} dp \ e^{\frac{-i \epsilon V(x_{n-1})}{\hbar}} e^{\frac{-i \epsilon T(p)}{\hbar}} e^{\frac{i p (x_{n-1} -x_{n})}{\hbar}}
 \end{align}
