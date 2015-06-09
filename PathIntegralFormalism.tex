@@ -9,10 +9,10 @@ We divide the time interval between $t_a$ and $t_b$ into a large number $N$ of s
   (x_R t_b | x_L t_a) = \bra{x_R}\hat{U}(t_b,t_{N-1}) \cdots \hat{U}(t_{n+1},t_n)\cdot\hat{U}(t_n,t_{n-1}) \cdots \hat{U}(t_2,t_1)\cdot\hat{U}(t_1,t_a)\ket{x_L}.
 \end{equation}
 Now between each two steps we insert the identity operator $1 = \int\limits_{-\infty}^{+\infty} dx_n \ket{x_n}\bra{x_n}$ and we get 
-\begin{align} \label{tpi}
+\begin{align}
   (x_R t_b | x_L t_a) &=  \bra{x_R}\hat{U}(t_b,t_{N-1}) \int\limits_{-\infty}^{+\infty} dx_{N-1} \ket{x_{N-1}}\bra{x_{N-1}} \hat{U}(t_{N-1},t_{N-2}) \cdots \ket{x_L} \\
                       &=  (\prod_{n=1}^{N-1} \int\limits_{-\infty}^{+\infty} dx_{n}) \bra{x_R}\hat{U}(t_b,t_{N-1})  \ket{x_{N-1}}\bra{x_{N-1}} \hat{U}(t_{N-1},t_{N-2}) \cdots \ket{x_L} \\
-                      &=  (\prod_{n=1}^{N-1} \int\limits_{-\infty}^{+\infty} dx_{n})\prod_{n=1}^{N} (x_n t_n | x_{n-1} t_{n-1})
+                      &=  (\prod_{n=1}^{N-1} \int\limits_{-\infty}^{+\infty} dx_{n})\prod_{n=1}^{N} (x_n t_n | x_{n-1} t_{n-1}) \label{tpi}
 \end{align}
 For the terms 
 \begin{equation}\label{tpn}
@@ -55,5 +55,9 @@ Now we can use that for very small $\epsilon = t_n - t_{n-1}$ the definition of 
 and we get
 \begin{align}
    (x_n t_n | x_{n-1} t_{n-1})  &=  \frac{1}{(2 \pi \hbar)^2} \int\limits_{-\infty}^{+\infty} dp \ e^{\frac{-i \epsilon ( V(x_{n-1}) + T(p) - p \dot{x}_n)}{\hbar}}
-                                &=  \frac{1}{(2 \pi \hbar)^2} \int\limits_{-\infty}^{+\infty} dp \ e^{\frac{i \epsilon (p \dot{x}_n - H(x_{n-1},p))}{\hbar}}
+                                &=  \frac{1}{(2 \pi \hbar)^2} \int\limits_{-\infty}^{+\infty} dp \ e^{\frac{i \epsilon (p \dot{x}_n - H(x_{n-1},p))}{\hbar}}.
+\end{align}
+We put this into \ref{tpi} and get 
+\begin{align}
+  (x_R t_b | x_L t_a) &=  \frac{1}{(2 \pi \hbar)^2}  (\prod_{n=1}^{N-1} \int\limits_{-\infty}^{+\infty} dx_{n})\prod_{n=1}^{N} \int\limits_{-\infty}^{+\infty} dp_n \ e^{\frac{i \epsilon (p_n \dot{x}_n - H(x_{n-1},p_n))}{\hbar}}
 \end{align}
