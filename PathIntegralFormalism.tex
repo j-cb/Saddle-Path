@@ -27,3 +27,7 @@ and use that the commutator $[\epsilon T, \epsilon V]$ is of order $\epsilon^2$ 
   \hat{U}(t_{n},t_{n-1}) = e^{\frac{-i \epsilon \hat{H}}{\hbar}} = e^{\frac{-i \epsilon (\hat T + \hat V)}{\hbar}} \\
   = e^{\frac{-i \epsilon \hat{T}}{\hbar}} e^{\frac{-i \epsilon \hat{V}}{\hbar}} (1 + \mathcal{O} (\epsilon^2) ) \approx e^{\frac{-i \epsilon \hat{T}}{\hbar}} e^{\frac{-i \epsilon \hat{V}}{\hbar}} 
 \end{align}
+Again inserting $1 = \int_{-\infty}^{+\infty} dx \ket{x}\bra{x}$, the single steps read
+\begin{equation}\label{tpn}
+  (x_n t_n | x_{n-1} t_{n-1}) = \bra{x_n} e^{\frac{-i \epsilon \hat{T}}{\hbar}} e^{\frac{-i \epsilon \hat{V}}{\hbar}}  \ket{x_{n-1}} = \int_{-\infty}^{+\infty} dx \bra{x_n} e^{\frac{-i \epsilon \hat{T}}{\hbar}} \ket{x} \bra{x} e^{\frac{-i \epsilon \hat{V}}{\hbar}}  \ket{x_{n-1}}
+\end{equation}
