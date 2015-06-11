@@ -60,13 +60,27 @@ and we get
 We put this into \ref{tpi} and get 
 \begin{align}
   (x_R t_b | x_L t_a) &=  (\prod_{n=1}^{N-1} \int\limits_{-\infty}^{+\infty} dx_{n})\prod_{n=1}^{N} (\int\limits_{-\infty}^{+\infty} \frac{dp_n}{2 \pi \hbar}  \ e^{\frac{i}{\hbar} \epsilon (p_n \dot{x}_n - H(x_{n-1},p_n))})  \\
-                      &=  (\prod_{n=1}^{N-1} \int\limits_{-\infty}^{+\infty} dx_{n})(\prod_{n=1}^{N} \int\limits_{-\infty}^{+\infty}  \frac{dp_n}{2 \pi \hbar}) \ e^{\sum_{n=1}^{N}\frac{i}{\hbar} \epsilon (p_n \dot{x}_n - H(x_{n-1},p_n))}
+                      &=  (\prod_{n=1}^{N-1} \int\limits_{-\infty}^{+\infty} dx_{n})(\prod_{n=1}^{N} \int\limits_{-\infty}^{+\infty}  \frac{dp_n}{2 \pi \hbar}) \ e^{\sum_{n=1}^{N}\frac{i}{\hbar} \epsilon (p_n \dot{x}_n - H(x_{n-1},p_n))} \label{pipi}
 \end{align}
-If we regard $x_{n-1}$, $\dot{x}_n$ and $p_n$ in
+Out of the dependency of $x_{n-1}$, $\dot{x}_n$ and $p_n$ of the counting parameter $n$ in
 \begin{equation}
   \sum_{n=1}^{N}\frac{i}{\hbar} \epsilon (p_n \dot{x}_n - H(x_{n-1},p_n)).
 \end{equation}
-as functions of the time $t$, this sum is a Riemann sum and for small $\epsilon$ becomes equal to the integral
+we make  functions of the time $t_n = t_a + n \epsilon$:
+\begin{equation}\label{riemannsum}
+  \sum_{n=1}^{N}\frac{i}{\hbar} \epsilon (p(t_n) \dot{x}(t_n) - H(x(t_n),p(t_n))).
+\end{equation}
+The sum \ref{riemannsum} is a Riemann sum and for small $\epsilon$ becomes equal to the integral
 \begin{equation}
   \int\limits_{t_a}^{t_b}  \frac{i}{\hbar} dt (p \dot{x} - H(x,p)).
 \end{equation}
+Also, for this point of view of  $x$, $\dot{x}$ and $p$ depending on $t$, the functions $x(t)$ and $p(t)$ themselves are becoming the integration variables in \ref{pipi}; for the limit $N \rightarrow \infty$, we write
+\begin{align}
+     (\prod_{n=1}^{N-1} \int\limits_{-\infty}^{+\infty} dx_{n}) &=: \int \mathcal{D} x   \\
+     (\prod_{n=1}^{N} \int\limits_{-\infty}^{+\infty}  \frac{dp_n}{2 \pi \hbar}) &=: \int \frac{ \mathcal{D}p}{2 \pi \hbar}.
+\end{align}
+This means we integrate over all smooth functions $x(t)$ with $x(t_a) = x_L$ and $x(t_b) = x_R$ and arbitrary (?) smooth functions $p(t)$.
+Putting this together, \ref{pipi} becomes
+\begin{align}
+  (x_R t_b | x_L t_a) &=  \int \int  \mathcal{D} x \ \frac{ \mathcal{D}p}{2 \pi \hbar} \ e^{ \  \int\limits_{t_a}^{t_b}  \frac{i}{\hbar} dt (p \dot{x} - H(x,p))} .
+\end{align}
