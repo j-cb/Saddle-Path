@@ -82,5 +82,9 @@ Also, for this point of view of  $x$, $\dot{x}$ and $p$ depending on $t$, the fu
 This means we integrate over all smooth functions $x(t)$ with $x(t_a) = x_L$ and $x(t_b) = x_R$ and arbitrary (?) smooth functions $p(t)$.
 Putting this together, \ref{pipi} becomes
 \begin{align}
-  (x_R t_b | x_L t_a) &=  \int \int  \mathcal{D} x \ \frac{ \mathcal{D}p}{2 \pi \hbar} \ e^{ \  \int\limits_{t_a}^{t_b}  \frac{i}{\hbar} dt (p \dot{x} - H(x,p))} .
+  (x_R t_b | x_L t_a) &=  \int \int  \mathcal{D} x \ \frac{ \mathcal{D}p}{2 \pi \hbar} \ e^{  \frac{i}{\hbar}   \int\limits_{t_a}^{t_b}dt (p \dot{x} - H(x,p))} .
 \end{align}
+That is the path integral formulation of the transition probability.
+
+Now the problem is that we don't really have an overview on how the phase $ \frac{i}{\hbar}   \int\limits_{t_a}^{t_b} dt (p \dot{x} - H(x,p))$ behaves for the totality of the vast collection of paths in position and momentum space; it isn't even sure that the path integral converges in a meaningful sense.
+An idea to solve this issue is to rewrite the integrations in such a way that the contributions of as many alternative paths as possible cancel out and only a few "meaningful" ones remain that might have a somewhat controlled phase.
